@@ -13,6 +13,8 @@
     var btn=document.getElementById('run');
     var btnMin=document.getElementById('min');
     var btnMax=document.getElementById('max');
+    var btnSum=document.getElementById('sum');
+    var btnMoyen=document.getElementById('average');
     var tabRandom=[];
     var minNbre;
 
@@ -34,6 +36,11 @@
         
         btnMin.innerHTML=Math.min(...tabRandom);
         btnMax.innerHTML=Math.max(...tabRandom);
-        console.log();
+
+        var addition = (previousValue, currentValue) => previousValue + currentValue;
+        btnSum.innerHTML=tabRandom.reduce(addition);
+        var somme=tabRandom.reduce(addition);
+
+        btnMoyen.innerHTML=somme/tabRandom.length;
     })
 })();

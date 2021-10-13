@@ -27,5 +27,8 @@
         "cerise",
     ];
 
-    // your code here
+    const dedoub= new Set(fruits);
+    const tabDedoub=[...dedoub];
+    console.log(tabDedoub);
+
 })();

@@ -88,5 +88,17 @@
         },
     ];
 
-    // your code here
+    var btn=document.getElementById('run');
+    var tabAge=[];
+
+    btn.addEventListener('click', function (){
+        for (i=0; i<people.length; i++){
+            
+            var addition=(previousValue, currentValue) => previousValue+currentValue;
+            var age=people[i].age;
+            tabAge.push(age);
+            var somme=tabAge.reduce(addition);
+            console.log(somme);
+        }
+    })
 })();

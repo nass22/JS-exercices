@@ -38,5 +38,31 @@
         "arboré",
     ]);
 
-    // your code here
+    var btn=document.getElementById('run');
+
+    function randomNumbers(){
+        var min=1;
+        var max=12;
+        var nombre=Math.floor(Math.random() * (max-min))+min;
+        return nombre;
+    }
+    /*
+    function randomAdjectives(){
+        for (i=0; i<adjectives.size; i++){
+            
+        }
+    }
+    randomAdjectives();
+    */
+    btn.addEventListener('click', function (){
+
+        var randomBirds=birds[randomNumbers()];
+        
+
+        console.log(adjectives.values);
+        
+        
+        
+    })
+    
 })();

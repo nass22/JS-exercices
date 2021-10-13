@@ -22,5 +22,14 @@
         "Lucas",
     ]);
 
-    // your code here
+    var btn=document.getElementById('run');
+
+    btn.addEventListener('click', function (){
+        console.log("Il y a " + people.size + " personnes dans le tableau.");
+        if(people.has('Alexandre')==true){
+            console.log("Alexandre est présent dans le tableau.");
+        } else {
+            console.log("Alexandre n'est pas présent dans le tableau.");
+        }
+    })
 })();
