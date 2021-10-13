@@ -25,5 +25,21 @@
         "cerise",
     ];
 
-    // your code here
+    var btn=document.getElementById('run');
+    btn.addEventListener('click', function (){
+
+        if(fruits.includes('pomme')==true){
+            console.log("L'élément est présent!")
+        } else {
+            console.log("L'élément n'est pas présent!");
+        }
+        
+        /*for(i=0;i<fruits.length;i++){
+            if(fruits.indexOf("pomme") !== -1){
+                console.log("Oui");
+            } else {
+                console.log("Non");
+            }
+        }*/
+    })
 })();

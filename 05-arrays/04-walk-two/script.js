@@ -25,5 +25,9 @@
         "cerise",
     ];
 
-    // your code here
+    var btn=document.getElementById('run');
+
+    btn.addEventListener('click', function (){
+        fruits.forEach(elem => console.log(elem));
+    })
 })();

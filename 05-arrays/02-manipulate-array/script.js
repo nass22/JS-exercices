@@ -23,5 +23,13 @@
         "cerise",
     ];
 
-    // your code here
+    var btn=document.getElementById('run');
+
+    btn.addEventListener('click', function (){
+        fruits.shift();
+        fruits.pop();
+        fruits.unshift('banane');
+        fruits.push('kiwi');
+        document.write(fruits);
+    })
 })();

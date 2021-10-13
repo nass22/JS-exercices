@@ -38,5 +38,9 @@
         },
     ];
 
-    // your code here
+    var btn=document.getElementById('run');
+
+    btn.addEventListener('click', function (){
+        people.forEach(elem => console.log(elem.lastname));
+    })
 })();

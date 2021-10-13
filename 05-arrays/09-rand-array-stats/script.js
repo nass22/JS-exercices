@@ -10,5 +10,30 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var btn=document.getElementById('run');
+    var btnMin=document.getElementById('min');
+    var btnMax=document.getElementById('max');
+    var tabRandom=[];
+    var minNbre;
+
+    function randomNumbers(){
+        var min=1;
+        var max=100;
+        var nombre=Math.floor(Math.random() * (max-min))+min;
+        tabRandom.push(nombre);
+        return nombre;
+    }
+    
+    
+
+    btn.addEventListener('click', function (){
+        for(i=1; i<=10;i++){
+            var tab = document.getElementById('n-'+i);
+            tab.innerHTML=randomNumbers();
+        }
+        
+        btnMin.innerHTML=Math.min(...tabRandom);
+        btnMax.innerHTML=Math.max(...tabRandom);
+        console.log();
+    })
 })();

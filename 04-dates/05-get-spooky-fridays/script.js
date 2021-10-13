@@ -10,5 +10,22 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var btn = document.getElementById('run');
+    const mois = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const jour = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+    btn.addEventListener('click', function () {
+        var input = document.getElementById('year').value;
+
+        for (i = 0; i < 12; i++) {
+            var date = new Date();
+            date.setFullYear(input, i, 13);
+            console.log(date);
+            var jourAnnee = jour[date.getDay()];
+
+            if (jourAnnee == 'Fri') {
+                document.write(mois[i] + " ");
+            }
+        }
+    })
 })();

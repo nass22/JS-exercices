@@ -25,5 +25,8 @@
         "cerise",
     ];
 
-    // your code here
+    var btn=document.getElementById("run");
+    btn.addEventListener('click', function(){
+        document.write(fruits[3]);
+    })
 })();

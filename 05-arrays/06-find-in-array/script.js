@@ -88,5 +88,13 @@
         },
     ];
 
-    // your code here
+    var btn=document.getElementById('run');
+
+    btn.addEventListener('click', function (){
+        for(i=0;i<people.length; i++){
+            if((people[i].firstname=="Jean")&&(people[i].lastname=="Dupont")){
+                console.log("Son email est: " + people[i].email + " et son index est: " + [i])
+            }
+        }
+    })
 })();
