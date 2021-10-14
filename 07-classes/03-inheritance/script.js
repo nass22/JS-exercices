@@ -10,10 +10,30 @@
 // You will have time to focus on it later.
 
 (() => {
+    var btn = document.getElementById('run');
     class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+
         sayHello() {
             return `${this.constructor.greeting}! I'm ${this.name}!`;
         }
     }
-    // your code here
-})();
+
+    class Dog extends Animal {
+        static greeting = "Hello ";
+    }
+
+    class Cat extends Animal {
+        static greeting = "Hello ";
+    }
+
+
+    btn.addEventListener('click', function () {
+    var dog = new Dog('Charlie');
+    var cat = new Cat('Kira');
+    console.log(dog.sayHello());
+    console.log(cat.sayHello());
+})
+}) ();

@@ -10,5 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var btn = document.getElementById('run');
+
+    class person {
+        constructor(firstname, lastname) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+
+        sayHello() {
+            console.log("Hello " + this.firstname + " " + this.lastname);
+        }
+    }
+
+    btn.addEventListener('click', () => {
+        var test=new person('Samir', 'Nacer');
+        test.sayHello();
+    })
 })();

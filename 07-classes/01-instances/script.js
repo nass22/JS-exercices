@@ -16,5 +16,9 @@
             this.age = age;
         }
     }
-    // your code here
+    
+    var myCat= new Cat("Skitty","9 ans");
+    var myCat2=new Cat("Pixel", "6 ans");
+    console.log(myCat);
+    console.log(myCat2);
 })();
