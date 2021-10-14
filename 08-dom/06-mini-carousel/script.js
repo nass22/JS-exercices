@@ -18,5 +18,17 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    var btn = document.getElementById('next');
+
+    var image = document.querySelector('figure img');
+    var compteur = 0;
+
+    btn.addEventListener('click', function () {
+        image.setAttribute('src', gallery[compteur]);
+        compteur++;
+
+        if (compteur > 4) {
+            compteur = 0;
+        }
+    })
 })();

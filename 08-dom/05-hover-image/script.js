@@ -10,5 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var img=document.querySelector('figure img');
+    var dataImg=img.getAttribute('data-hover');
+    img.addEventListener('mouseover', function(event){
+        img.setAttribute('src', dataImg);
+    })
 })();
