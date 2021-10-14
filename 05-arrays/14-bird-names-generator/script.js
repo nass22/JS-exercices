@@ -39,6 +39,9 @@
     ]);
 
     var btn=document.getElementById('run');
+    var btnTarget=document.getElementById('target');
+    var tabAdjectives=Array.from(adjectives);
+    
 
     function randomNumbers(){
         var min=1;
@@ -46,23 +49,27 @@
         var nombre=Math.floor(Math.random() * (max-min))+min;
         return nombre;
     }
-    /*
-    function randomAdjectives(){
-        for (i=0; i<adjectives.size; i++){
-            
-        }
+
+    function randomNumbersAdj(){
+        var min=1;
+        var max=11;
+
+        var nombre=Math.floor(Math.random() * (max-min))+min;
+        return nombre;
     }
-    randomAdjectives();
-    */
+
+    
     btn.addEventListener('click', function (){
 
         var randomBirds=birds[randomNumbers()];
+        var randomAdj=tabAdjectives[randomNumbersAdj()];
         
-
-        console.log(adjectives.values);
-        
-        
-        
+        if (randomBirds.fem == true){
+            btnTarget.innerHTML=randomBirds.name + " " + randomAdj + "e";
+        } else {
+            btnTarget.innerHTML=randomBirds.name + " " + randomAdj;
+        }  
+            
     })
     
 })();
