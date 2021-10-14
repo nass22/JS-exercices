@@ -19,20 +19,18 @@
         }
 
         get fullName(){
-            return this.firstname + this.lastname;
+            return `${this.firstname} ${this.lastname}`;
         }
 
         set fullName(value){
-            const espace=value.split(" ");
-            this.firstname= espace[0];
-            this.lastname=espace[1];
+            [this.firstname, this.lastname] = value.split(" ");
         }
     }
-
-
 
     btn.addEventListener('click', () => {
         var test=new Person('Samir', 'Nacer');
         console.log(test.fullName);
+        var test2=new Person('Jean', 'Peeters');
+        console.log(test2.fullName);
     })
 })();
