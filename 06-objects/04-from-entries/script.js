@@ -12,5 +12,15 @@
 (() => {
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
-    // your code here
+    const map=new Map();
+    
+    var btn=document.getElementById('run');
+
+    btn.addEventListener('click', function(){
+        for (i=0; i<keys.length; i++){
+            map.set(keys[i],values[i]);
+        }
+        mapObj=Object.fromEntries(map);
+        console.log(mapObj);
+    })
 })();

@@ -26,5 +26,23 @@
         os: "linux",
         user: null,
     };
-    // your code here
+    
+    var btn=document.getElementById('run');
+    
+    
+    btn.addEventListener('click', function (){
+        for (i=0; i<computers.length; i++){
+            if (computers[i].hasOwnProperty('available')===false){
+                computers[i].available=defaultProps.available;           
+            } if (computers[i].hasOwnProperty('user')===false){
+                computers[i].user=defaultProps.user;
+            } if (computers[i].hasOwnProperty('os')===false) {
+                computers[i].os=defaultProps.os;
+            }
+
+        }
+        console.log(computers);
+
+    })
+
 })();
