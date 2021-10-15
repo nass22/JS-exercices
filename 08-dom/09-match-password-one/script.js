@@ -10,5 +10,22 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var btn=document.getElementById('run');
+
+    btn.addEventListener('click', function(){
+        var pw1=document.getElementById('pass-one').value;
+        var pw2=document.getElementById('pass-two').value;
+        var input1=document.getElementById('pass-one');
+        var input2=document.getElementById('pass-two');
+        
+        
+        if (pw1===pw2){
+            input1.setAttribute('style','border-color:green');
+            input2.setAttribute('style','border-color:green');
+        } else {
+            input1.setAttribute('style','border-color:red');
+            input2.setAttribute('style','border-color:red');
+        }
+    })
+    
 })();

@@ -10,5 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var target=document.getElementById('target');
+    var table=document.createElement("table");
+    target.appendChild(table);
+    
+
+    
+        for (i=0; i<10; i++){
+            var row=document.createElement("tr");
+            var ligne=document.createElement("td");
+            row.appendChild(ligne);
+            console.log(row);
+            table.appendChild(row);
+    }
 })();

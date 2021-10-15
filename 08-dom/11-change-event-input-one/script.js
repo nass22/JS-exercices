@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    var input=document.getElementById('pass-one');
+    var compteur=0;
+    input.addEventListener('keypress', function(){
+        compteur++;
+        if (compteur=10){
+            input.setAttribute('maxlength','10');
+        }
+        
+    });
+    
 })();
