@@ -10,6 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
+
+    //A TERMINER
     
     var input=document.getElementById('pass-one');
     var compteur=0;
