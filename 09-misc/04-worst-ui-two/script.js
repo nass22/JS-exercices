@@ -10,6 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
+    
+    //problème de 0 qui reste pas lorsqu'on ajoute un autre numéro
+
     let btnOne=document.getElementById('part-one');
     let btnTwo=document.getElementById('part-two');
     let btnThree=document.getElementById('part-three');
