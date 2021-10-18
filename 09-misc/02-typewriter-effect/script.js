@@ -9,6 +9,28 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
+
 (() => {
-    // your code here
+
+    let para=document.getElementById('target');
+    let text=document.getElementById('target').textContent;
+    const arrayLetters=text.split("");
+    
+    
+    para.innerHTML=' ';
+    
+    let interval;
+
+    function loop(){
+        if(arrayLetters.length>0){
+            para.innerHTML+=arrayLetters.shift();
+        } else {
+            clearTimeout(interval);
+        }
+        interval = setTimeout(loop, 130);
+    }
+    
+    loop();
+
 })();
