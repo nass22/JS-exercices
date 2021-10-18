@@ -30,27 +30,22 @@
     const span = document.querySelectorAll('#target span');
     
 
-
         for (i = 0; i < span.length; i++) {
             let number = [i].toString();
             let reste = number % 10;
             let dizaine = (number - reste) / 10;
             
-
-            
-            
             if ([i] < 10) {
-                span[i].setAttribute('style', 'font-size:' + [20 + reste] + 'px');
+                span[i].setAttribute('style', 'font-size:' + [20 + reste*2] + 'px');
                 
             } else {
                 if (dizaine % 2 == 0) {
-                    span[i].setAttribute('style', 'font-size:' + [20 + reste] + 'px');
+                    span[i].setAttribute('style', 'font-size:' + [20 + reste*2] + 'px');
                    
                 } else if (dizaine % 2 != 0) {
-                    span[i].setAttribute('style', 'font-size:' + [20 - reste] + 'px');
+                    span[i].setAttribute('style', 'font-size:' + [20 - reste]*2 + 'px');
                     
                 }
             }
-            console.log(span[i]);
         }
     }) ();
