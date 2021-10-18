@@ -10,5 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let btn=document.getElementById('increment');
+    let score=document.getElementById('target');
+    let clique=0;
+    
+    window.onload= () => {
+        if (localStorage.getItem('nbreClique')!=0){
+            score.innerHTML=localStorage.getItem('nbreClique');
+            clique=localStorage.getItem('nbreClique');
+        } else {
+            clique=0;
+            score.innerHTML=clique;
+            localStorage.setItem('nbreClique', clique);
+        }
+    }
+
+    btn.addEventListener('click', () => {
+        clique++;
+        score.innerHTML=clique;
+        localStorage.setItem('nbreClique', clique);
+    })
+
+    
 })();

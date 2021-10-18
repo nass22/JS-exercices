@@ -10,9 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    var random;
-    var valeur;
-    var essai=0;
+    let random;
+    let valeur;
+    let essai=0;
 
     function randomNumber(){
         random=Math.floor(Math.random() * 100);
