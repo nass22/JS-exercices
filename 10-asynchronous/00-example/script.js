@@ -27,4 +27,5 @@
         intervals.push(setupIntervalMessage("four", 5000));
         intervals.push(setupIntervalMessage("five", 10000));
     });
+    
 })();

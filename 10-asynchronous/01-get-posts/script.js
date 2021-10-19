@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let btn=document.getElementById('run');
+ 
+    btn.addEventListener('click', () => {
+        window.lib.getPosts((error, articles) => {
+            if (error){
+                throw error;
+            } else {
+                console.log(articles);
+            }
+        })
+    });    
+   
 })();
