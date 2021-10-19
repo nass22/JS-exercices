@@ -10,5 +10,28 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+
+    let btn=document.getElementById('run');
+
+    btn.addEventListener('click', () => {
+        window.lib.getPosts((error,articles) =>{
+            if (error){
+                throw error;
+            } else {
+                for (elem in articles){
+                    window.lib.getComments(elem,(error, comments)=>{
+                        if (error){
+                            throw error;
+                        } else {
+                            articles[elem].comments=comments;
+                        }
+                        console.log(articles[elem]);
+                    })
+                }
+            }
+            
+        })
+    })    
+    
 })();
