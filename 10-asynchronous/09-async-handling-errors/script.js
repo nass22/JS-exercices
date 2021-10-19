@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let btn=document.getElementById('run');
+
+    btn.addEventListener('click', async() => {
+        await window.lib.getPersons()
+
+        .then((persons)=>{
+            for(elem in persons){
+                console.log(persons[elem]);
+            }
+        })    
+        .catch((error)=>{
+            console.error(error);
+        })
+        
+    })
 })();

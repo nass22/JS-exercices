@@ -19,10 +19,12 @@
                 window.lib.getComments(elem)
                 .then((comments => {
                     articles[elem].comments=comments;
+                    console.log(articles[elem]);
                     elem--;
                 }))
-            }
                 
+            }
+                    
         })
     })
 })();

@@ -10,5 +10,22 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let btn=document.getElementById('run');
+
+    btn.addEventListener('click', async() => {
+        await window.lib.getPosts()
+        .then((articles)=>{
+            for(elem in articles){
+                window.lib.getComments(elem)
+                .then((comments)=>{
+                    articles[elem].comment=comments;
+                    console.log(articles[elem]);
+                    elem--;
+                })
+            }
+        })
+           
+           
+        
+    })
 })();

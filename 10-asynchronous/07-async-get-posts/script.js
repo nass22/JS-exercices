@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let btn=document.getElementById('run');
+
+    btn.addEventListener('click', async()=>{
+        const articles = await window.lib.getPosts();
+        articles.forEach(elem => {
+            console.log(elem);
+        });
+        
+    })
 })();
