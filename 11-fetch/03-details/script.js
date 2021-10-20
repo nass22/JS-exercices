@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    
+
     function createTemplate(name, alterego, abilities) {
         let createLi = document.createElement('li');
         createLi.setAttribute('class', 'hero');
@@ -35,6 +35,23 @@
         createP.innerHTML = abilities;
         createLi.appendChild(createP);
     }
+
+    let btn = document.getElementById('run');
+
+    btn.addEventListener('click', () => {
+        let inputId = document.getElementById('hero-id').value;
+
+        fetch('http://localhost:3000/heroes')
+            .then(response => response.json())
+            .then(data => {
+                let nameHeroes = data[inputId].name
+                let alteregoHeroes = data[inputId].alterEgo
+                let abilitiesHeroes = data[inputId].abilities
+
+                createTemplate(nameHeroes, alteregoHeroes, abilitiesHeroes);
+            })
+    })
+
 
 
 })();
