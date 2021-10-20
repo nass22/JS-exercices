@@ -62,14 +62,6 @@
         "test2"
       ],
       "id": 7
-    },
-    {
-      "name": "test3",
-      "alterEgo": "test4",
-      "abilities": [
-        "test6"
-      ],
-      "id": 8
     }
   ]
 }

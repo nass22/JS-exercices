@@ -10,5 +10,28 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    let btn = document.getElementById('run');
+
+    btn.addEventListener('click', () => {
+        let idInput = document.getElementById('hero-id').value;
+        const removeObject={id:idInput}
+        
+        fetch('http://localhost:3000/heroes/'+idInput, {
+            method: 'DELETE',
+
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+
+            body: JSON.stringify(removeObject)
+        })
+        
+        .then(response => {
+            return response.json()
+
+        })
+        .then(data => console.log(data));
+
+    })
 })();
