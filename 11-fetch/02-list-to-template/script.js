@@ -13,11 +13,30 @@
     let btn = document.getElementById('run');
     let target = document.getElementById('target');
 
+    function createTemplate(name, alterego, abilities) {
+        let createLi = document.createElement('li');
+        createLi.setAttribute('class', 'hero');
+        target.appendChild(createLi);
 
+        let createH4 = document.createElement('h4');
+        createH4.setAttribute('class', 'title');
+        createLi.appendChild(createH4);
 
+        let strong = document.createElement('strong');
+        strong.setAttribute('class', 'name');
+        strong.innerHTML = name;
+        createH4.appendChild(strong);
 
+        let createEm = document.createElement('em');
+        createEm.setAttribute('class', 'alter-ego');
+        createEm.innerHTML = alterego;
+        createH4.appendChild(createEm);
 
-
+        let createP = document.createElement('p');
+        createP.setAttribute('class', 'powers');
+        createP.innerHTML = abilities;
+        createLi.appendChild(createP);
+    }
 
 
     btn.addEventListener('click', () => {
@@ -25,28 +44,11 @@
             .then(response => response.json())
             .then(data => {
                 for (elem in data) {
-                    let createLi = document.createElement('li');
-                    createLi.setAttribute('class', 'hero');
-                    target.appendChild(createLi);
+                    let nameHeroes = data[elem].name
+                    let alteregoHeroes = data[elem].alterEgo
+                    let abilitiesHeroes = data[elem].abilities
 
-                    let createH4 = document.createElement('h4');
-                    createH4.setAttribute('class', 'title');
-                    createLi.appendChild(createH4);
-
-                    let strong = document.createElement('strong');
-                    strong.setAttribute('class', 'name');
-                    strong.innerHTML = data[elem].name;
-                    createH4.appendChild(strong);
-
-                    let createEm = document.createElement('em');
-                    createEm.setAttribute('class', 'alter-ego');
-                    createEm.innerHTML = data[elem].alterEgo;
-                    createH4.appendChild(createEm);
-
-                    let createP = document.createElement('p');
-                    createP.setAttribute('class', 'powers');
-                    createP.innerHTML = data[elem].abilities;
-                    createLi.appendChild(createP);
+                    createTemplate(nameHeroes, alteregoHeroes, abilitiesHeroes);
                 }
             })
     })

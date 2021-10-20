@@ -10,5 +10,31 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    function createTemplate(name, alterego, abilities) {
+        let createLi = document.createElement('li');
+        createLi.setAttribute('class', 'hero');
+        target.appendChild(createLi);
+
+        let createH4 = document.createElement('h4');
+        createH4.setAttribute('class', 'title');
+        createLi.appendChild(createH4);
+
+        let strong = document.createElement('strong');
+        strong.setAttribute('class', 'name');
+        strong.innerHTML = name;
+        createH4.appendChild(strong);
+
+        let createEm = document.createElement('em');
+        createEm.setAttribute('class', 'alter-ego');
+        createEm.innerHTML = alterego;
+        createH4.appendChild(createEm);
+
+        let createP = document.createElement('p');
+        createP.setAttribute('class', 'powers');
+        createP.innerHTML = abilities;
+        createLi.appendChild(createP);
+    }
+
+
 })();
