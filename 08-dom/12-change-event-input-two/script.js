@@ -32,22 +32,4 @@
         }
     })
     
-
-    /*
-    var input=document.getElementById('pass-one');
-    var compteur=0;
-    
-    function hasNumber(x){
-        return /\d/.test(x);
-    }
-
-    input.addEventListener('keydown', () => {
-        compteur++;
-        
-        if ((compteur>=8) && ((hasNumber(input.value)))){
-            document.getElementById('validity').innerHTML='Ok';
-        }
-        
-    })
-    */
 })();
